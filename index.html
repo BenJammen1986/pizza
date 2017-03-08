@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Just Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="formOne">
+        <div class="pizzaSelect">
+          <div class="jumbotron">
+            <h1>Cheeseheads Pizza</h1>
+          </div>
+          <h2>Thanks for choosing cheeseheads!</h2>
+          <h4>Welcome to the simple pizza selector</h4>
+          <p>
+            No sales pitch: let's get straight to the good stuff!
+          </p>
+          <p>
+            Just enter the size and toppings you would like for your pizza, and we'll get it to you as fast as humanly possible...driving at the speed limit...in a Volkswagen Rabbit.
+          </p>
+          <div class="row">
+            <div class="col-md-4">
+              <form id="pizzaSize">
+                <div class="form-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="movie" value="extraLarge">Extra Large
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="movie" value="large">Large
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="movie" value="medium">Medium
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="movie" value="small">Small
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <form id="pizzaToppings">
+                <div class="form-group">
+                  <input type="checkbox" name="work-transportation" value="bike"> Riding a bike.<br>
+                  <input type="checkbox" name="work-transportation" value="car">Driving a car.<br>
+                  <input type="checkbox" name="work-transportation" value="carpool">Carpooling with others.<br>
+                  <input type="checkbox" name="work-transportation" value="walk">Walking.<br>
+                  <input type="checkbox" name="work-transportation" value="bus">Riding the bus.<br>
+                  <input type="checkbox" name="work-transportation" value="train">Riding the train.<br>
+                  <input type="checkbox" name="work-transportation" value="streetcar">Riding the streetcar.<br>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <form id="customerAddress">
+                <div class="form-group">
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <button type="submit" name="btn btn-primary" id=
+        "priceBtn">Feed Me!</button>
+      </form>
+      <div id="confirmation">
+      </div>
+    </div>
+  </body>
+</html>
