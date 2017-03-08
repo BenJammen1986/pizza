@@ -2,49 +2,51 @@
 // business logic
 
 // pizza constructor
-
-function Pizza(size, toppings) {
+function Pizza(size) {
   this.size = size;
-  this.toppings = toppings;
+  this.toppings=[];
+  this.price = 0;
 }
 
 Pizza.prototype.fullPrice = function() {
-    var Price=0;
-    if (this.size === "extraLarge") {
-    Price = 14.99;
-  } else if (this.size === "Large") {
-    Price = 12.99;
-  } else if (this.size === "Medium") {
-    Price = 9.99;
-  } else {
-    Price = 7.99;
-  }
-    this.toppings.forEach(function(topping) {
-    Price += .75;
-    })
-    return Price;
+  if (this.size === "extraLarge") {
+    this.price = 14.99;
+    } else if (this.size === "Large") {
+    this.price = 12.99;
+    } else if (this.size === "Medium") {
+    this.price = 9.99;
+    } else {
+    this.price = 7.99;
+    }
+  // this.toppings.forEach(function(topping) {
+  //   this.price += .75;
+  // });
 }
 
 // user interface logic:
 
 $(function() {
   $("#allInfo").submit(function(event) {
-    debugger;
-    var allToppings = [];
+    // var allToppings = [];
     event.preventDefault();
+    // var price = 0;
     $("#price").show();
 // All input fields
-    var inputSize = $("input[name=pizzaSize]").val();
-    $("input:checkbox[name=pizzaToppings]:checked").map(function(){
-      allToppings = ($(this).val());
-    })
-// Object creation
-    var customerPizza = new Pizza(inputSize,allToppings);
-// Output field
-    // $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + "</span></li>");
-    $("#orderDetails").append("<li><b>Size:</b>" + customerPizza.size + "</li>");
-    // $("orderDetails").append.forEach("")
-    $("#orderDetails").append("<li><b>Price:</b>") + customerPizza.fullPrice + "</li>"
 
-  });
+    var inputSize = $("input[name=pizzaSize]").val();
+    var customerPizza = new Pizza(inputSize);
+
+    $("input:checkbox[name=pizzaToppings]:checked").map(function(){
+      customerPizza.toppings.push($(this).val());
+      console.log(customerPizza.toppings);
+    });
+// Object creation
+
+    customerPizza.fullPrice();
+// Output field
+    console.log(customerPizza.toppings[0]);
+    $("#orderDetails").append("<li><b>Size: </b>" + customerPizza.size + "</li>");
+    $("#orderDetails").append("<li><b>Price: </b>" + customerPizza.price + "</li>");
+    $("#orderDetails").append("<li><b>Toppings: </b>" + customerPizza.toppings + "</li>");
+  })
 });
