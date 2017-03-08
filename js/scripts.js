@@ -48,9 +48,9 @@ Pizza.prototype = {
   var fullPrice=0;
     if (this.size === "extraLarge") {
     fullPrice = 14.99;
-  } if else (this.size === "large") {
+  } else if (this.size === "large") {
     fullPrice = 12.99;
-  } if else (this.size === "medium") {
+  } else if (this.size === "medium") {
     fullPrice = 9.99;
   } else {
     fullPrice = 7.99;
