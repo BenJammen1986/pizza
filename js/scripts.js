@@ -1,15 +1,13 @@
 
 // business logic
 
-
 // pizza constructor
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
 }
 
-
-var customerPizza = new Pizza;
+var customerPizza = new Pizza();
 
 
 Pizza.prototype.fullPrice = function() {
@@ -28,3 +26,11 @@ Pizza.prototype.fullPrice = function() {
     })
     return fullPrice;
 };
+
+
+
+// user interface logic:
+
+$(function() {
+  ("#formOne")
+})
