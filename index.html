@@ -23,47 +23,43 @@
             Just enter the size and toppings you would like for your pizza, and we'll get it to you as fast as humanly possible...driving at the speed limit...in a Volkswagen Rabbit.
           </p><br><br>
           <div class="row">
-            <form id="pizzaSize">
-              <div class="col-md-4">
+            <form id="allInfo">
+              <div class="col-md-6">
                 <div class="form-group" id="pizzaSize">
-                  <h3><b>Select Your Pizza Size</b></h3>
+                  <h3><b>1. Select Your Pizza Size</b></h3>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="movie" value="extraLarge">Extra Large
+                      <input type="radio" name="pizzaSize" value=14.99>Extra Large
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="movie" value="large">Large
+                      <input type="radio" name="pizzaSize" value=12.99>Large
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="movie" value="medium">Medium
+                      <input type="radio" name="pizzaSize" value=9.99>Medium
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="movie" value="small">Small
+                      <input type="radio" name="pizzaSize" value=7.99>Small
                     </label>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-4">
+                </div><br><br>
                 <div class="form-group" id="pizzaToppings">
-                  <h3><b>Select Your Pizza Toppings</b></h3>
-                  <input type="checkbox" name="work-transportation" value="bike"> Riding a bike.<br>
-                  <input type="checkbox" name="work-transportation" value="car">Driving a car.<br>
-                  <input type="checkbox" name="work-transportation" value="carpool">Carpooling with others.<br>
-                  <input type="checkbox" name="work-transportation" value="walk">Walking.<br>
-                  <input type="checkbox" name="work-transportation" value="bus">Riding the bus.<br>
-                  <input type="checkbox" name="work-transportation" value="train">Riding the train.<br>
-                  <input type="checkbox" name="work-transportation" value="streetcar">Riding the streetcar.<br>
+                  <h3><b>2. Now Select Your Pizza Toppings</b></h3>
+                  <input type="checkbox" name="pizzaToppings" value="Pepperoni">Pepperoni<br>
+                  <input type="checkbox" name="pizzaToppings" value="Sausage">Sausage<br>
+                  <input type="checkbox" name="pizzaToppings" value="Pineapple">Pineapple<br>
+                  <input type="checkbox" name="pizzaToppings" value="Cheddar">Cheddar<br>
+                  <input type="checkbox" name="pizzaToppings" value="Tomatoes">Tomatoes<br>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="form-group" id="customerAddress">
-                  <h3><b>Please enter your address</b></h3>
+              <div class="col-md-6">
+                <div id="customerAddress">
+                  <h3><b>3. Please enter your address</b></h3>
                   <div class="form-group">
                     <label for="new-first-name">First name</label>
                     <input type="text" class="form-control" id="new-first-name">
@@ -86,15 +82,20 @@
                         <label for="new-state">State</label>
                         <input type="text" class="form-control new-state">
                       </div>
+                      <div class="form-group">
+                        <label for="new-zip">Zip</label>
+                        <input type="number" class="form-control new-zip">
+                      </div>
                     </div>
                   </div>
-                </div>
+                </div><br><br>
+                <h3 id="pizzaSubmit">4. The time has come: get your pizza on!</h3><br>
+                <button type="submit" name="btn btn-primary" id=
+                "priceBtn">Feed Me!</button>
               </div>
             </form>
           </div>
-        </div>
-        <button type="submit" name="btn btn-primary" id=
-        "priceBtn">Feed Me!</button>
+        </div><br><br>
       </form>
       <div id="confirmation">
       </div>
