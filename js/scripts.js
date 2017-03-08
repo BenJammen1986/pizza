@@ -1,4 +1,1 @@
-var pizza = {
-  toppings: [];
-  size: 
-}
+
